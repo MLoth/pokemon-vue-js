@@ -1,4 +1,5 @@
 # Pokemon
+## WDD course - Vue.js basics
 
 We gaan een kleine website maken die Pokemons kan tonen. We gaan hiervoor gebruik maken van de [PokeAPI](https://pokeapi.co/).
 Bij deze een klein stappenplan. Zoals steeds kan je er ook voor opteren om zelf aan de slag te gaan en dit te laten werken!
