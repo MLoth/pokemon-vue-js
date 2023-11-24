@@ -1,34 +1,26 @@
 <template>
-  <div v-for="skeleton in amount" class="c-skeleton">
-    <div class="c-skeleton__image"></div>
+  <div class="c-ghost" v-for="ghost in ghosts">
+    <div class="c-ghost__image"></div>
 
-    <div class="c-skeleton__info">
-      <div class="c-skeleton__header">
-        <div class="c-skeleton__name"></div>
-        <div class="c-skeleton__button"></div>
-      </div>
+    <div class="c-ghost__info">
+      <header class="c-ghost__header">
+        <h2 class="c-ghost__name"></h2>
+        <div class="c-ghost__button"></div>
+      </header>
 
-      <p class="c-skeleton__link">More info <ChevronRight /></p>
+      <p class="c-ghost__link">More info ></p>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ChevronRight } from 'lucide-vue-next'
+import { ref } from 'vue'
 
-// TODO: We willen niet 1 zien, maar x aantal die we doorgeven als prop
-defineProps({
-  amount: {
-    type: Number,
-    default: 4,
-  },
-})
-// TODO: zet hier een prop op die een getal doorgeeft
+const ghosts = ref(12)
 </script>
 
 <style lang="scss">
-// https://pastebin.com/2XRmW8Zm
-.c-skeleton {
+.c-ghost {
   width: 100%;
 
   &__image {
@@ -70,9 +62,6 @@ defineProps({
   }
 
   &__link {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
     padding: 1rem 0;
     color: #dfdfdf;
     font-size: 0.75rem;
@@ -82,13 +71,13 @@ defineProps({
 }
 
 @media screen and (min-width: 480px) {
-  .c-skeleton {
+  .c-ghost {
     width: calc((100% - 1 * 2rem) / 2);
   }
 }
 
 @media screen and (min-width: 768px) {
-  .c-skeleton {
+  .c-ghost {
     width: calc((100% - 3 * 2rem) / 4);
   }
 }

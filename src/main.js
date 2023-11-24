@@ -1,4 +1,4 @@
-import './assets/reset.css'
+import './assets/preflight.css'
 
 import { createApp } from 'vue'
 import App from './App.vue'
